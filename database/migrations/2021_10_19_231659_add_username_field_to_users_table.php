@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class AddUsernameFieldToUsersTable extends Migration {
     public function up() {
         Schema::table('users', function (Blueprint $table) {
-            $table->string("username")->unique();
+            $table->string("username")->unique()->after("name");
         });
     }
 
